@@ -1,6 +1,7 @@
 from typing import Any
 
 import scrapy
+from scrapy.crawler import CrawlerProcess
 from scrapy.http import Response
 
 
@@ -23,4 +24,3 @@ class CoffeeCaveSpider(scrapy.Spider):
             "price": product.css("div.price::text").get(default="N/A").strip()
         }
         return items
-
