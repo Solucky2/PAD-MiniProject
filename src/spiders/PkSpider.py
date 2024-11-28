@@ -6,7 +6,7 @@ from scrapy.http import Response
 class PkSpider(scrapy.Spider):
     name = 'PkSpider'
     pk_pages_num = 29
-    start_urls = [f'https://www.przyjacielekawy.pl/c/kawa/page/{i}/' for i in range(1, pk_pages_num + 1)] #Dużo N/A z ceną
+    start_urls = [f'https://www.przyjacielekawy.pl/c/kawa/page/{i}/' for i in range(1, pk_pages_num + 1)]
 
     def parse(self, response: Response, **kwargs: Any) -> Any:
         products = response.css("ul.products li.product")

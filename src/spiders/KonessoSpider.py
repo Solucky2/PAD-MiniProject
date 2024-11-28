@@ -1,13 +1,12 @@
 from typing import Any
 import scrapy
-from scrapy.crawler import CrawlerProcess
 from scrapy.http import Response
 
 
 class KonessoSpider(scrapy.Spider):
     name = "KonessoSpider"
     konesso_pages = 86
-    start_urls = [f"https://www.konesso.pl/pol_m_Kawa-2147.html?counter={i}" for i in range(1, konesso_pages + 1)] #git
+    start_urls = [f"https://www.konesso.pl/pol_m_Kawa-2147.html?counter={i}" for i in range(1, konesso_pages + 1)]
 
 
     def parse(self, response: Response, **kwargs: Any) -> Any:
@@ -24,11 +23,3 @@ class KonessoSpider(scrapy.Spider):
             "price_new": product.css("div.product_prices span.price::text").re_first(r"\d+,\d+\s?zł", default="N/A")
         }
         return item
-
-process = CrawlerProcess(settings={
-    "FEEDS": {
-        "scrapped_pages/output_konesso.csv": {"format": "csv"},
-    },
-})
-process.crawl(KonessoSpider)
-process.start()

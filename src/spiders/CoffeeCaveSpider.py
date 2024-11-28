@@ -1,14 +1,12 @@
 from typing import Any
-
 import scrapy
-from scrapy.crawler import CrawlerProcess
 from scrapy.http import Response
 
 
 class CoffeeCaveSpider(scrapy.Spider):
     name = "CoffeeCaveSpider"
     start_urls = [
-        "https://coffeecave.pl/sklep/kawy-jednorodne" #git
+        "https://coffeecave.pl/sklep/kawy-jednorodne"
     ]
 
 
