@@ -9,7 +9,6 @@ class CoffeeCaveSpider(scrapy.Spider):
         "https://coffeecave.pl/sklep/kawy-jednorodne"
     ]
 
-
     def parse(self, response: Response, **kwargs: Any) -> Any:
         products = response.css("div.main-product-box")
         for product in products:
