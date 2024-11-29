@@ -13,21 +13,21 @@ scrapy
 matplotlib  
 Ich pełne wersje znajdują się w pliku **requirements.txt**
 
-Dla każdej z tych stron napisany został oddzielna klasa dziedzicząca po scrapy.Spider - wszystkie znajdują się w 
-podkatalogu spiders. W celu wyczyszczenia pobranych danych w podkatalogu **/notebooks** powstały pliki **%cleaner.ipynb** 
+Dla każdej z tych stron napisana została oddzielna klasa dziedzicząca po scrapy.Spider - wszystkie znajdują się w 
+podkatalogu **/spiders**. W celu wyczyszczenia pobranych danych w podkatalogu **/notebooks** powstały pliki **%cleaner.ipynb** 
 służące do przetworzenia oraz normalizacji danych. Klasy Spiders zostały uruchomione w tychże plikach, a pobrane wyniki
-(pliki **output_nazwa_strony.csv**) zapisane zostały w podkatalogu **/scrapped_pages**. Dane zostały przetworzone przez funkcję 
-temu dedykowane oraz za pośrednictwem wyrażeń regularnych (pakier **re**). Z uwagi na zróznicowaną postać pobranych danych
-funkcje zostały napisane bezpośrednio w notatnikach a nie w osobnych plikach .py - z uwagi na znikome możliwości ich 
-dalszego powielenia i wykorzystania. Końcowym etapem procesu czyszczenia było zapisanie plików z danymi gotowymi do
+(pliki **output_nazwa_strony.csv**) zapisane zostały w podkatalogu **/scrapped_pages**. Dane zostały przetworzone przez funkcje 
+im dedykowane oraz za pośrednictwem wyrażeń regularnych (pakier **re**). Z uwagi na zróznicowaną postać pobranych danych
+funkcje zostały napisane bezpośrednio w notatnikach, a nie w osobnych plikach .py - z uwagi na znikome możliwości ich 
+dalszego powielenia i wykorzystania. Końcowym etapem procesu czyszczenia było zapisanie plików z gotowymi danymi do
 wizualizacji w podkatalogu **/cleaned_data**.
 
-Finalnym elementem projektu była wizualizacja oraz wnioskowanie z finalnie przygotowanych danych. Odbyło się to w pliku
-**plotter_final.ipynb**, znajdującego się w podkatalogu **/notebooks**. Zawiera on trzy wykresy przedstawiające zakres cen 
+Finalnym elementem projektu była wizualizacja oraz wnioskowanie z przygotowanych danych. Odbyło się to w pliku
+**plotter_final.ipynb**, który znajduje się w podkatalogu **/notebooks**. Zawiera on trzy wykresy przedstawiające zakres cen 
 dla poszczególnych stron internetowych oraz wykres przedstawiający średnie obniżki cen, z uwagi na zbliżające się wydarzenie
 **Black Friday**. Przedstawione zostały one jedynie na stronach **konesso** oraz **przyjacielekawy**, ponieważ **CoffeeCave**
 nie informuje klientów o rabatach. Funkcje które zostały wykorzystane do tworzenia wykresów przy użyciu biblioteki 
-matplotlib zostały umieszczone w pliku **helpers.py**, z uwagi na ich potencjał do wykorzystania w wielu miejsach w 
+matplotlib zostały umieszczone w pliku **helpers.py**, sugerując się ich potencjałem do wykorzystania w wielu miejsach w 
 projekcie. 
 
 Wnioski:
